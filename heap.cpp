@@ -1,7 +1,8 @@
-#include <iostream>
-#include <array>
+#include "sorts.h"
 
-using namespace std;
+
+int heap_moves    = 0;
+int heap_compares = 0;
 
 
 void heapify(string* a, int L, int R)
@@ -9,7 +10,9 @@ void heapify(string* a, int L, int R)
     int i = L;
     int j = 2 * L;
     string x = a[L];
+    heap_moves++;
 
+    heap_compares++;
     if ((j < R) && (a[j] < a[j + 1]))
     {
         j += 1;
@@ -17,10 +20,15 @@ void heapify(string* a, int L, int R)
 
     while ((j <= R) && (x < a[j]))
     {
+        heap_compares++;
+
         a[i] = a[j];
+        heap_moves++;
+
         i = j;
         j *= 2;
 
+        heap_compares++;
         if ((j < R) && (a[j] < a[j + 1]))
         {
             j += 1;
@@ -28,6 +36,7 @@ void heapify(string* a, int L, int R)
     }
 
     a[i] = x;
+    heap_moves++;
 }
 
 void Heapsort(string* a, int N)
@@ -42,6 +51,8 @@ void Heapsort(string* a, int N)
         string w = a[1];
         a[1] = a[R];
         a[R] = w;
+        heap_moves += 3;
+        
         heapify(a, 1, R-1);
     }
 }

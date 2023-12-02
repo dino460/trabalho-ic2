@@ -1,11 +1,9 @@
-#include <iostream>
-#include <array>
+#include "sorts.h"
 
-using namespace std;
 
-int while_ik_jr = 0;
-int while_ik = 0;
-int while_jr = 0;
+int merge_moves    = 0;
+int merge_compares = 0;
+
 
 void merge(string* a, int L, int h, int R, string* c)
 {
@@ -17,14 +15,20 @@ void merge(string* a, int L, int h, int R, string* c)
     {
         k += 1;
 
+        merge_compares++;
+
         if (a[i] < a[j])
         {
             c[k] = a[i];
+            merge_moves++;
+
             i += 1;
         }
         else
         {
             c[k] = a[j];
+            merge_moves++;
+
             j += 1;
         }
     }
@@ -33,6 +37,8 @@ void merge(string* a, int L, int h, int R, string* c)
     {
         k += 1;
         c[k] = a[i];
+        merge_moves++;
+
         i += 1;
     }
 
@@ -40,6 +46,8 @@ void merge(string* a, int L, int h, int R, string* c)
     {
         k += 1;
         c[k] = a[j];
+        merge_moves++;
+
         j += 1;
     }
 }
@@ -63,6 +71,7 @@ void mpass(string* a, int N, int p, string* c)
         for (int j = i; j < N; j++)
         {
             c[j] = a[j];
+            merge_moves++;
         }
     }
     
