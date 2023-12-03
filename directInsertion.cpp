@@ -3,7 +3,7 @@
 int directInsertion_moves    = 0;
 int directInsertion_compares = 0;
 
-void DirectInsertionsort(String *a, int N)
+void DirectInsertionsort(string *a, int N)
 {
     String x;
 
