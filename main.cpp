@@ -5,7 +5,7 @@ int main()
 {
     string filename = "data/mes_";
 
-    for (int i = 1; i <= 1; i++)
+    for (int i = 1; i <= 5; i++)
     {
         filename.append(to_string(i));
         filename.append(".txt");
@@ -37,19 +37,40 @@ int main()
             sorted_arr[i] = file_data[i];
         }
 
-        cout << "test\n";
         // DirectInsertionsort(sorted_arr, file_data.size() + 1);
-        // BinaryInsertionsort(sorted_arr, file_data.size() + 1);
-        // Selectionsort(sorted_arr, file_data.size() + 1);
-        Bubblesort(sorted_arr, file_data.size() + 1);
-        // Heapsort(sorted_arr, file_data.size() + 1);
-        // MergeSort(opcode_arr, sorted_arr, file_data.size() + 1);
-        // Quicksort(sorted_arr, file_data.size() + 1);
+        // cout << "comps: " << directInsertion_compares << endl 
+        //      << "moves: " << directInsertion_moves << endl;
 
-        for (int i = 1; i < file_data.size() + 2; i++)
-        {
-            cout << sorted_arr[i] << endl;
-        }
+        // BinaryInsertionsort(sorted_arr, file_data.size() + 1);
+        // cout << "comps: " << binaryInsertion_compares << endl 
+        //      << "moves: " << binaryInsertion_moves << endl;
+
+        Selectionsort(sorted_arr, file_data.size() + 1);
+        cout << "comps: " << selection_compares << endl 
+             << "moves: " << selection_moves << endl;
+
+        // Bubblesort(sorted_arr, file_data.size() + 1);
+        // cout << "comps: " << bubble_compares << endl 
+        //      << "moves: " << bubble_moves << endl;
+
+        // Heapsort(sorted_arr, file_data.size() + 1);
+        // cout << "comps: " << heap_compares << endl 
+        //      << "moves: " << heap_moves << endl;
+
+        // MergeSort(opcode_arr, sorted_arr, file_data.size() + 1);
+        // cout << "comps: " << merge_compares << endl 
+        //      << "moves: " << merge_moves << endl;
+
+        // Quicksort(sorted_arr, file_data.size() + 1);
+        // cout << "comps: " << quick_compares << endl 
+        //      << "moves: " << quick_moves << endl;
+
+
+        // for (int i = 1; i < file_data.size() + 2; i++)
+        // {
+        //     cout << sorted_arr[i] << endl;
+        // }
+        cout << endl;
     }
 
     cout << endl;

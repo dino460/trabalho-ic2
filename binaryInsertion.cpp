@@ -11,6 +11,8 @@ void BinaryInsertionsort(string *a, int N)
     for(int i = 2; i < N; i++)
     {
         x = a[i];
+        binaryInsertion_moves++;
+
         L = 1;
         R = i;
 
@@ -18,10 +20,10 @@ void BinaryInsertionsort(string *a, int N)
         {
             m = (L + R)/2;
             
+            binaryInsertion_compares++;
+            
             if(a[m] <= x)
-            {
-                binaryInsertion_compares++;
-                
+            {    
                 L = m+1;
             } 
             else

@@ -7,12 +7,12 @@ void Bubblesort(string *a, int N)
 {
     for(int i = 2; i < N; i++)
     {
-        for(int j = N; j < i; j--)
+        for(int j = N; j > i; j--)
         {
+            bubble_compares++;
+            
             if(a[j-1] > a[j])
-            {
-                bubble_compares++;
-                
+            {    
                 string x = a[j-1];
                 a[j-1] = a[j];
                 a[j] = x;
