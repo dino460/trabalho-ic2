@@ -38,9 +38,13 @@ int main()
         }
 
         cout << "test\n";
+        // DirectInsertionsort(sorted_arr, file_data.size() + 1);
+        // BinaryInsertionsort(sorted_arr, file_data.size() + 1);
+        // Selectionsort(sorted_arr, file_data.size() + 1);
+        Bubblesort(sorted_arr, file_data.size() + 1);
         // Heapsort(sorted_arr, file_data.size() + 1);
         // MergeSort(opcode_arr, sorted_arr, file_data.size() + 1);
-        Quicksort(sorted_arr, file_data.size() + 1);
+        // Quicksort(sorted_arr, file_data.size() + 1);
 
         for (int i = 1; i < file_data.size() + 2; i++)
         {

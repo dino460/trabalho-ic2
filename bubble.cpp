@@ -5,8 +5,6 @@ int bubble_compares = 0;
 
 void Bubblesort(string *a, int N)
 {
-    string x; 
-
     for(int i = 2; i < N; i++)
     {
         for(int j = N; j < i; j--)
@@ -15,11 +13,11 @@ void Bubblesort(string *a, int N)
             {
                 bubble_compares++;
                 
-                x = a[j-1];
+                string x = a[j-1];
                 a[j-1] = a[j];
                 a[j] = x;
 
-                bubble_moves += 2;
+                bubble_moves += 3;
             }
         }
     }

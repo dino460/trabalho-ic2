@@ -32,7 +32,7 @@ void BinaryInsertionsort(string *a, int N)
             
         int j = i;
 
-        while(j < R)
+        while(j > R)
         {
             a[j] = a[j-1];
             binaryInsertion_moves++;
