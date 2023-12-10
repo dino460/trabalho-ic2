@@ -1,0 +1,16 @@
+COMPARAÇÃO:
+Os algorítmos de Inserção Direta, Seleção Direta e Bubblesort apresentam complexidade de comparação média de ordem O(n²), que são refletidas na característica de crescimento obsrvada em seus gráficos. A Inserção Direta apresenta complexidade de comparação mínima de ordem O(n), diferentemente dos outros dois métodos, o que pode justificar seu número de comparações ser consideravelmente menor que o resto (ainda que apresentando crescimento característico O(n²)), já que os casos apresentados podem se aproximar do caso mínimo para esse algorítmo.
+
+Já a Inserção Binária, o Heapsort, o Mergesort e o Quicksort apresentam, todos, complexidade de comparação média de ordem O(n*log(n)), refletida nos gráficos desses algorítmos.
+
+
+MOVIMENTAÇÃO
+Os algorítmos de Inserção Direta, Inserção Binária e Bubblesort apresentam complexidade de comparação média de ordem O(n²), claramente perceptíveis na característica de crescimento de seus gráficos.
+
+Já os algorítmos de Heapsort, Mergesort e Quicksort, possuem complexidade de comparação média de ordem O(n*log(n)), condizendo com os dados dos gráficos.
+
+Por fim, o algorítmo de Seleção Direta apresenta complexidade de comparação média de ordem O(n), que no gráfico, devido à escala dos números obtidos, é quase imperceptível, mas que é visível nos dados tabelados.
+
+
+CONCLUSÃO
+O algorítmo mais adequado para este problema depende das necessidades e limitações que o envolvem. Em média, os algorítmos Heapsort, Mergesort e Quicksort suprirão de forma excepcional quaisquer necessidades, possuindo performance exemplar tanto em comparações quanto em movimentações. No entanto, vale mencionar que, caso não hajam limitações no número de comparações, o algorítmo de Seleção Direta apresenta os melhores valores de movimentação com espetacular dimensionamento
