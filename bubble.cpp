@@ -1,3 +1,13 @@
+//=================================================================//
+//           INTRODUÇÃO À COMPUTAÇÃO II - TRABALHO FINAL           //
+//                     Professor: Renato Tinós                     //
+//                                                                 //
+//                           Código por:                           //
+//   Lorenzo Dutra de Oliveira Sales Decari Vicentin [14590093]    //
+//               Raphael Zoega Cali Gomes [11800717]               //
+//=================================================================//
+
+
 #include "sorts.h"
 
 int bubble_moves    = 0;
